@@ -1,0 +1,30 @@
+﻿@model IEnumerable<ExistingDbConnection.ViewModels.JoinDataVM>
+
+@{
+    ViewBag.Title = "Student Body Statistics";
+}
+
+<h2>Student Body Statistics</h2>
+
+<table>
+    <tr>
+        <th>
+            Country
+        </th>
+        <th>
+            Websites
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rank)
+            </td>
+            <td>
+                @item.RankCount
+            </td>
+        </tr>
+    }
+</table>
